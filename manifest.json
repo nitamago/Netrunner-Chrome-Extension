@@ -1,0 +1,17 @@
+{
+  "name": "SAMPLE_2",
+  "manifest_version": 2,
+  "version": "1.0",
+  "browser_action": {
+    "default_title": "SAMPLE_2",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "js": ["jquery-3.4.1.min.js", "content_script.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+
+}

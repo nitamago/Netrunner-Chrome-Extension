@@ -1,4 +1,5 @@
-﻿chrome.runtime.onMessage.addListener(function(msg) {
+﻿// popup.jsからのメッセージがここにくるはず
+chrome.runtime.onMessage.addListener(function(msg) {
   console.log("Reloaded");
   observer.disconnect();
   init();

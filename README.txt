@@ -1,3 +1,10 @@
-”wŒiF‚ğ•Ï‚¦‚éƒTƒ“ƒvƒ‹‚ğÀ‘•‚µ‚Ä‚İ‚½
+Google Chrome æ‹¡å¼µæ©Ÿèƒ½é–‹ç™º åŸºæœ¬æ¦‚å¿µ
+https://qiita.com/k7a/items/26d7a22233ecdf48fed8
+
+èƒŒæ™¯è‰²ã‚’å¤‰ãˆã‚‹ã‚µãƒ³ãƒ—ãƒ«ã‚’å®Ÿè£…ã—ã¦ã¿ãŸ
 https://qiita.com/guru_taka/items/37a90766f4f845e963e5
 https://qiita.com/wjtnk/items/3220afa6748995537358
+
+å¯¾è±¡ã‚µãƒ¼ãƒ“ã‚¹
+Jinteki
+https://www.jinteki.net/

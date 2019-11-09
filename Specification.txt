@@ -25,7 +25,7 @@ observer = new MutationObserver(records => {
   src = "https://res.cloudinary.com/hvtn93q21/image/upload/v1573265136/Netrunner/cards/";
   preview = $(".card-zoom").children(".card-preview");
   img_clone = preview.children("img").clone();
-　src_name = img_clone.attr("src");
+  src_name = img_clone.attr("src");
   if (src_name != null) {
     png_name = src_name.split("/")[3];
     console.log(src + png_name);
@@ -43,7 +43,8 @@ observer.observe(target, {
   childList: true
 });
 
-// For Cards
+
+// For Deck Builder
 // カード拡大表示ノード取得
 target = $('.decks').children('div')[2];
 // Mutation Observer設定
@@ -57,7 +58,7 @@ observer = new MutationObserver(records => {
   src = "https://res.cloudinary.com/hvtn93q21/image/upload/v1573265136/Netrunner/cards/";
   preview = $('.decks').children('div').children(".card-preview");
   img_clone = preview.children("img").clone();
-　src_name = img_clone.attr("src");
+  src_name = img_clone.attr("src");
   if (src_name != null) {
     png_name = src_name.split("/")[3];
     console.log(src + png_name);

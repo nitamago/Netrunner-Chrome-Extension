@@ -1,0 +1,78 @@
+﻿要件:Jintekiの英語表記カードを日本語に変換するChrome拡張機能を作る
+
+Jinteki:ネットランナーをブラウザでできる有志作成のサービス
+https://www.jinteki.net/
+
+Jintekiのカード拡大表示仕様:
+JSでマウスオーバーされたカードの拡大画像を特定のdivに表示している
+
+今回の拡張機能の仕様:
+カード拡大表示エリアのdivがDOM操作されたかを監視し、
+DOM操作で挿入された画像ファイルの名前からカードIDを特定し、
+別途準備する日本語カード画像に差し替える。
+
+// For play
+// card-zoomクラスのノード取得
+target = document.getElementsByClassName('card-zoom')[0];
+// Mutation Observer設定
+observer = new MutationObserver(records => {
+  // 変化が発生したときの処理を記述
+
+  // 無限ループが起きないよう、ObserverをOFFにする
+  observer.disconnect();
+
+  // imgノードを挿入
+  src = "https://res.cloudinary.com/hvtn93q21/image/upload/v1573265136/Netrunner/cards/";
+  preview = $(".card-zoom").children(".card-preview");
+  img_clone = preview.children("img").clone();
+　src_name = img_clone.attr("src");
+  if (src_name != null) {
+    png_name = src_name.split("/")[3];
+    console.log(src + png_name);
+    img_clone.attr("src", src + png_name);
+    preview.append(img_clone);
+  }
+  
+  // ObserverをONにする
+  observer.observe(target, {
+    childList: true
+  });
+});
+// DOM監視開始
+observer.observe(target, {
+  childList: true
+});
+
+// For Cards
+// カード拡大表示ノード取得
+target = $('.decks').children('div')[2];
+// Mutation Observer設定
+observer = new MutationObserver(records => {
+  // 変化が発生したときの処理を記述
+
+  // 無限ループが起きないよう、ObserverをOFFにする
+  observer.disconnect();
+
+  // imgノードを挿入
+  src = "https://res.cloudinary.com/hvtn93q21/image/upload/v1573265136/Netrunner/cards/";
+  preview = $('.decks').children('div').children(".card-preview");
+  img_clone = preview.children("img").clone();
+　src_name = img_clone.attr("src");
+  if (src_name != null) {
+    png_name = src_name.split("/")[3];
+    console.log(src + png_name);
+    img_clone.attr("src", src + png_name);
+    preview.append(img_clone);
+  }
+  
+  // ObserverをONにする
+  observer.observe(target, {
+    childList: true
+  });
+});
+// DOM監視開始
+observer.observe(target, {
+  childList: true
+});
+
+

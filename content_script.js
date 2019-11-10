@@ -15,8 +15,7 @@ function main(e) {
         if (document.getElementsByClassName('card-zoom')[0] != null) {
             clearInterval(jsInitCheckTimer);
         }
-
-	init();
+        init();
     }
 }
 
@@ -42,11 +41,6 @@ function init(){
       img_clone.attr("src", src + png_name);
       preview.append(img_clone);
     }
-  
-    // ObserverをONにする
-    observer.observe(target, {
-      childList: true
-    });
   });
   
   // DOM監視開始

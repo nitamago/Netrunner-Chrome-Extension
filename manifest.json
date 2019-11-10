@@ -1,9 +1,14 @@
 {
-  "name": "SAMPLE_2",
+  "name": "Netrunner-Chrome-Extension_2",
+  "description": "Localizing Netrunner cards into Japanese.",
   "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Ext title",
+    "default_popup": "popup.html"
+  },
   "version": "1.0",
   "browser_action": {
-    "default_title": "SAMPLE_2",
+    "default_title": "Netrunner-Chrome-Extension_2",
     "default_popup": "popup.html"
   },
 
@@ -11,6 +16,10 @@
     {
       "js": ["jquery-3.4.1.min.js", "content_script.js"],
       "matches": ["http://www.jinteki.net/*", "https://www.jinteki.net/*"]
+    },
+    {
+      "js": ["jquery-3.4.1.min.js", "content_script.js"],
+      "matches": ["http://www.jinteki.net/play", "https://www.jinteki.net/play"]
     }
   ]
 
